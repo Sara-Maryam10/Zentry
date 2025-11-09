@@ -1,0 +1,114 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgb(17, 19, 18);
+  color: rgb(78, 231, 218);
+  padding: 16px 24px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(78, 231, 218, 0.15);
+  transition: background-color 0.3s ease;
+}
+
+.navbar:hover {
+  background-color: rgb(20, 21, 22);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  animation: logoEntrance 1s ease forwards;
+}
+
+@keyframes logoEntrance {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.logo-image {
+  height: 95px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: rotate(15deg) scale(1.1);
+}
+
+.logo-text {
+  font-weight: bold;
+  font-size: 40px;
+  color: rgb(78, 231, 218);
+  user-select: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding-right: 20px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(78, 231, 218, 0.3) transparent;
+}
+
+.navbar-right::-webkit-scrollbar {
+  height: 5px;
+}
+
+.navbar-right::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.navbar-right::-webkit-scrollbar-thumb {
+  background-color: rgba(78, 231, 218, 0.3);
+  border-radius: 10px;
+}
+
+.nav-button {
+  color: rgb(78, 231, 218);
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  background-color: rgba(78, 231, 218, 0.1);
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.nav-button:hover {
+  background: linear-gradient(90deg, #50FFD6 0%, #30B8FF 100%);
+  color: rgb(17, 19, 18);
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 2px 18px rgba(80, 255, 214, 0.3);
+}
+
+.nav-button:active {
+  transform: scale(0.95);
+  box-shadow: none;
+}
+
+.nav-button.active {
+  background: linear-gradient(90deg, #50FFD6 0%, #30B8FF 100%);
+  color: rgb(17, 19, 18);
+  box-shadow: 0 0 12px rgb(78, 231, 218);
+  transform: scale(1.1);
+}
